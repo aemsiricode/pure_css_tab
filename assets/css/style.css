@@ -1,0 +1,122 @@
+/* Google Font - Popins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  background: #ededed;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tab-container{
+  width: 100%;
+  max-width: 700px;
+  margin: 130px auto;
+  background: #ffffff;
+  padding: 25px 30px 30px 30px;
+  border-radius: 5px;
+}
+
+.tab-container .sub-title{
+  color: #848290;
+}
+
+.tab-container .tabs{
+  position: relative;
+  width: 100%;
+  height: 2.8125rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.tab-container .tabs label{
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  color: #7b61ff;
+}
+
+.tab-container .tabs .btn-slider{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #7b61ff;
+  border-radius: 1000em;
+  left:0;
+  bottom: 0;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+#home:checked ~ .tabs label.home,
+#about:checked ~ .tabs label.about,
+#services:checked ~ .tabs label.services,
+#portfolio:checked ~ .tabs label.portfolio,
+#contact:checked ~ .tabs label.contact{
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+#about:checked ~ .tabs .btn-slider{
+  left:20%;
+}
+
+#services:checked ~ .tabs .btn-slider{
+  left:40%;
+}
+
+#portfolio:checked ~ .tabs .btn-slider{
+  left:60%;
+}
+
+#contact:checked ~ .tabs .btn-slider{
+  left:80%;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.contents .image-container img{
+  width: 100%;
+  height: auto;
+}
+
+.contents .content{
+  display: none;
+}
+
+#home:checked ~ .contents .content-1,
+#about:checked ~ .contents .content-2,
+#services:checked ~ .contents .content-3,
+#portfolio:checked ~ .contents .content-4,
+#contact:checked ~ .contents .content-5{
+  display: block;
+}
+
+.contents, .contents .image-container{
+  margin-top: 1rem;
+}
+
+.contents .desc{
+  margin-top: .5rem;
+}
+
+.contents .content .title{
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
